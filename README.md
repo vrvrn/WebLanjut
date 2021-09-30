@@ -14,13 +14,6 @@ More information about the plans for version 4 can be found in [the announcement
 The user guide corresponding to this version of the framework can be found
 [here](https://codeigniter4.github.io/userguide/).
 
-## Installation & updates
-'composer create-project codeigniter4/appstarter' then 'composer update' whenever there is a new release of the framework.
-
-When updating, check the release notes to see if there are any changes you might need to apply to your app folder. The affected files can be copied or merged from vendor/codeigniter4/framework/app.
-
-## Setup
-Copy 'env' to '.env' and tailor for your app, specifically the baseURL and any database settings.
 
 ## Important Change with index.php
 

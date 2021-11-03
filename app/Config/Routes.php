@@ -42,6 +42,7 @@ $routes->get('/', function () {
 });
 $routes->get('/register', 'Templating::register');
 $routes->post('/saveRegister', 'Templating::saveRegister');
+$routes->get('/biodata/(:alpha)/(:num)', 'Home::fungsiBaru/$1/$2');
 $routes->get('/posts', 'PostController::index');
 $routes->get('/about', function () {
 	$data=[
@@ -56,11 +57,14 @@ $routes->get('/about', function () {
 $routes->get('/admin', 'Templating::index');
 $routes->get('/admin/posts', 'AdminPostsController::index');
 $routes->get('/admin/posts/create', 'AdminPostsController::create');
+$routes->get('/admin/posts/edit/(:segment)', 'AdminPostsController::edit/$1');
+$routes->get('/admin/posts/delete/(:segment)', 'AdminPostsController::delete/$1');
+$routes->post('/admin/posts/update/(:segment)', 'AdminPostsController::update/$1');
 $routes->get('/admin/posts/store', 'AdminPostsController::store');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
- * --------------------------------------------------------------------
+ * ------------------------4--------------------------------------------
  *
  * There will often be times that you need additional routing and you
  * need it to be able to override any defaults in this file. Environment
